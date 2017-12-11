@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>VisComp</title>
+
+    <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link
+          rel="stylesheet"
+          href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css"
+          integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb"
+          crossorigin="anonymous">
+
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-5">
+          <ul id="viz-tabs" class="nav nav-tabs">
+            <li class="nav-item">
+              <a class="nav-link active" data-target="#tab-map,#map-div" data-toggle="tab">Map</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-target="#tab-corrmat,#corrmat-div" data-toggle="tab">
+                Correlation Matrix
+              </a>
+            </li>
+          </ul>
+
+          <div id="sidebar" class="tab-content side-panel-content">
+            <div class="tab-pane active opacity1" id="tab-map">
+
+              <strong>Measure = Variable A / Variable B</strong>
+
+                  <div class="dropdown">
+                    <button
+                       class="btn btn-secondary dropdown-toggle"
+                       type="button" data-toggle="dropdown">
+                      <span id="map-prop-a" class="dropdown-selection">Variable A</span>
+                    </button>
+                    <div class="dropdown-menu scrollable-menu map-dropdown">
+                      <a class="dropdown-item">1</a>
+                    </div>
+                  </div>
+
+                  <div class="dropdown">
+                    <button
+                       class="btn btn-secondary dropdown-toggle"
+                       type="button" data-toggle="dropdown">
+                      <span id="map-prop-b" class="dropdown-selection">Variable B</span>
+                    </button>
+                    <div class="dropdown-menu scrollable-menu map-dropdown">
+                      <a class="dropdown-item">1</a>
+                    </div>
+                  </div>
+
+            </div>
+
+            <div class="tab-pane" id="tab-corrmat">
+              <ol id="corr-list">
+              </ol>
+              Gender ratio: male/female population
+            </div>
+          </div>
+        </div>
+
+
+        <div class="col-7">
+          <div id="plots" class="tab-content">
+            <div id="map-div" class="tab-pane active svg-container"></div>
+            <div id="corrmat-div" class="tab-pane svg-container"></div>
+            <div id="scatter-div" class="tab-pane svg-container"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script
+          src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+          integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+          crossorigin="anonymous"></script>
+
+    <script
+          src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"
+          integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh"
+          crossorigin="anonymous"></script>
+    <script
+          src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"
+          integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ"
+          crossorigin="anonymous"></script>
+
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <script src="https://d3js.org/topojson.v1.min.js"></script>
+
+    <script src="libs/math.min.js"></script>
+    <script src="libs/lodash.min.js"></script>
+
+    <script src="js/utils.js"></script>
+    <script src="js/process_csv.js"></script>
+    <script src="js/plot_map.js"></script>
+    <script src="js/plot_corrmat.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>

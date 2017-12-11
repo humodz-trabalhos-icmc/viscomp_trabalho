@@ -1,0 +1,82 @@
+div {
+    /* border: 1px solid black; */
+}
+
+body {
+    background: white;
+    padding: 10px;
+}
+
+svg {
+    border: 1px solid black;
+}
+
+.svg-container {
+    display: inline-block;
+    width: 100%;
+    vertical-align: top;
+}
+
+.svg-content {
+    display: inline-block;
+}
+
+
+
+#map-div {
+    max-width: 600px;
+}
+
+.map circle.unset {
+    fill: steelblue;
+    r: 3px;
+}
+
+.map path {
+    fill: lavender;
+    stroke: white;
+    stroke-width: 0.2px;
+}
+
+
+
+.side-panel-content {
+    padding: 10px;
+}
+
+.dropdown  {
+    padding: 5px;
+}
+
+.dropdown .btn {
+    width: 100%;
+}
+
+.scrollable-menu {
+    height: auto;
+    max-height: 400px;
+    overflow-x: hidden;
+}
+
+.opacity1 {
+    opacity: 1;
+}
+
+
+#corrmat-div {
+    max-width: 600px;
+}
+
+.corrmat rect, .corrmat path {
+    stroke: black;
+    stroke-width: 1px;
+    shape-rendering: crispEdges;
+}
+
+.corrmat text {
+    font-size: 0.75rem;
+    font-weight: bold;
+    text-anchor: middle;
+    dominant-baseline: middle;
+    shape-rendering: crispEdges;
+}
